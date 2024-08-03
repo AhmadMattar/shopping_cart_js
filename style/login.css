@@ -1,0 +1,61 @@
+/* Colors
+#f7f7f7 - Light gray (Background color)
+#3b5998 - Deep blue (Primary color)
+#8b9dc3 - Light blue (Accent color)
+#333333 - Dark gray (Text color)
+#2a4887 - Dark blue (Hover color)
+*/
+
+/* body {
+    background-color: #f7f7f7;
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Nanum Gothic", sans-serif;
+} */
+
+.login_card {
+    background-color: #ffffff;
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    color: #333333;
+    border-radius: 5px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.login_card .card_title {
+    font-size: 20px;
+    text-align: left;
+    color: #3b5998;
+}
+
+.login_card .card_content input,
+.login_card .card_content .submit_btn {
+    font-family: "Nanum Gothic", sans-serif;
+    display: block;
+    margin: 10px auto;
+    padding: 5px;
+    height: 40px;
+    width: 60%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.login_card .card_content input {
+    border: 1px solid #ddd;
+}
+
+.login_card .card_content .submit_btn {
+    cursor: pointer;
+    background-color: #3b5998;
+    color: #ffffff;
+    transition: background-color 300ms, color 300ms;
+}
+
+.login_card .card_content .submit_btn:hover {
+    background-color: #2a4887;
+}

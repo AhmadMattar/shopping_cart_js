@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | Home page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <nav class="header">
+        <div class="logo">
+            <a href="index.html">Shopping Cart</a>
+        </div>
+        <ul class="links" id="links">
+            <li>
+                <a href="login.html">Sign In</a>
+            </li>
+            <li>
+                <a href="register.html">Sign Up</a>
+            </li>
+        </ul>
+        <div class="user_info" id="user_info">
+            <div class="welcome_msg" id="welcome_msg"></div>
+            <div class="cart-header">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="badge"></span>
+                <div class="cart-items">
+                    <div></div>
+                    <button class="go-to-cart">Show All <i class="fa-solid fa-circle-arrow-right"></i></button>
+                </div>
+            </div>
+            <div class="wishlist-header">
+                <i class="fa-regular fa-heart"></i>
+            </div>
+            <div class="vertical_line"></div>
+            <a class="logout" id="logout" href="index.html">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="products">
+            <!-- <div class="product-card">
+                <div class="product-image">
+                    <img src="assets/cat-img-4.jpg" alt="product-image"  >
+                </div>
+                <div class="product-details">
+                    <div class="peoduct-det">
+                        <h4 class="product-name">Headphones</h4>
+                        <span class="product-price">$14</span>
+                    </div>
+                    <p class="product-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto deserunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia fugiat, voluptatibus quo minima iusto consectetur enim a ea vel, amet doloribus ratione voluptatum laborum ullam tempore earum mollitia, quidem sunt?
+                    Delectus sint consectetur officia voluptatibus dignissimos ipsam pariatur perspiciatis neque voluptas dolore veniam facere incidunt beatae mollitia sunt fugiat recusandae, ad error odit illum. A voluptatibus veniam sunt nulla quia!</p>
+                    <div class="product-actions">
+                        <button class="add-to-cart">
+                            <i class="fa-solid fa-cart-plus"></i>
+                        </button>
+                        <button class="add-to-wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <script src="script/script.js"></script>
+    <script src="script/shopping_cart.js"></script>
+</body>
+
+</html>
