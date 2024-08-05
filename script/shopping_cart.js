@@ -111,6 +111,7 @@ cart_header.addEventListener('click', (e) => {
         if (cart_items_header.style.display == 'block') {
             cart_items_header.style.display = 'none'
         } else {
+            wishlist_items_header.style.display = 'none'
             cart_items_header.style.display = 'block'
         }
     }
@@ -121,14 +122,6 @@ browse_cart_btn.onclick = () => {
         window.location.href = 'shopping_cart.html'
     }, 1500)
 }
-
-// if (current_page == 'shopping_cart.html') {
-//     browse_products_btn.onclick = () => {
-//         setTimeout(() => {
-//             window.location.href = 'index.html'
-//         }, 1000)
-//     }
-// }
 
 function cartIsEmpty() {
     if(shopping_cart.length == 0) {

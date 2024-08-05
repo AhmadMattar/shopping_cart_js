@@ -78,7 +78,7 @@ function showProducts() {
                         <button class="add-to-cart" onclick="addToCart(${element.id})">
                             <i class="fa-solid fa-cart-plus"></i>
                         </button>
-                        <button class="add-to-wishlist">
+                        <button class="add-to-wishlist" onclick="addToWishlist(${element.id})">
                             <i class="fa-regular fa-heart"></i>
                         </button>
                     </div>

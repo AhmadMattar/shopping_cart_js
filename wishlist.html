@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart | Home page</title>
+    <title>Shopping Cart | Cart</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +13,7 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/wishlist.css">
 </head>
 
 <body>
@@ -42,8 +43,7 @@
                 <i class="fa-regular fa-heart"></i>
                 <span class="wishlist-badge"></span>
                 <div class="wishlist-items">
-                    <div>
-                    </div>
+                    <div></div>
                     <button class="go-to-wishlist">Show All <i class="fa-solid fa-circle-arrow-right"></i></button>
                 </div>
             </div>
@@ -54,29 +54,24 @@
         </div>
     </nav>
     <div class="container">
-        <div class="products">
-            <!-- <div class="product-card">
-                <div class="product-image">
-                    <img src="assets/cat-img-4.jpg" alt="product-image"  >
-                </div>
-                <div class="product-details">
-                    <div class="peoduct-det">
-                        <h4 class="product-name">Headphones</h4>
-                        <span class="product-price">$14</span>
-                    </div>
-                    <p class="product-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto deserunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia fugiat, voluptatibus quo minima iusto consectetur enim a ea vel, amet doloribus ratione voluptatum laborum ullam tempore earum mollitia, quidem sunt?
-                    Delectus sint consectetur officia voluptatibus dignissimos ipsam pariatur perspiciatis neque voluptas dolore veniam facere incidunt beatae mollitia sunt fugiat recusandae, ad error odit illum. A voluptatibus veniam sunt nulla quia!</p>
-                    <div class="product-actions">
-                        <button class="add-to-cart">
-                            <i class="fa-solid fa-cart-plus"></i>
-                        </button>
-                        <button class="add-to-wishlist">
-                            <i class="fa-regular fa-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div> -->
+        <div class="wishlist-shopping-content">
+            <div class="remove-all-wishlist">
+                <button class="remove-all-wishlist-btn">
+                    Remove All
+                    <i class="fa-solid fa-trash"></i>
+                </button>
+            </div>
+            <div class="wishlist-shopping-header">
+                <p>Product</p>
+                <p>Actions</p>
+            </div>
+            <div class="empty-wishlist">Your wishlist is empty! <button class="browse-btn">Browse Products</button></div>
+            <div class="wishlist-draw">
+            </div>
         </div>
+
+
+
     </div>
 
     <script src="script/script.js"></script>
