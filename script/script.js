@@ -68,8 +68,8 @@ function showProducts() {
                     <img src="assets/${element.image}" alt="product-image"  >
                 </div>
                 <div class="product-details">
-                    <div class="peoduct-det">
-                        <h4 class="product-name">${element.name}</h4>
+                    <div class="product-det">
+                        <h4 class="product-name" onclick="redirectToProductDetails(${element.id})">${element.name}</h4>
                         <span class="product-price">$${element.price}</span>
                     </div>
                     <p class="product-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto deserunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia fugiat, voluptatibus quo minima iusto consectetur enim a ea vel, amet doloribus ratione voluptatum laborum ullam tempore earum mollitia, quidem sunt?
@@ -91,4 +91,8 @@ if (current_page == 'index.html') {
     showProducts()
 }
 
+function redirectToProductDetails(id) {
+    localStorage.setItem('selected_product', id)
+    window.location.href = 'products/product_details.html' 
+}
 /*  End of Shopping Cart Implementation */

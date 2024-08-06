@@ -170,7 +170,7 @@ body {
     padding: 10px;
 }
 
-.product-details .peoduct-det {
+.product-details .product-det {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -180,6 +180,7 @@ body {
 
 .product-details .product-name {
     text-align: left;
+    cursor: pointer;
 }
 
 .product-price {
