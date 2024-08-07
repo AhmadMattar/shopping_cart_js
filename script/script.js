@@ -6,7 +6,7 @@ let logout = document.getElementById('logout')
 
 let current_path = window.location.href;
 current_path = current_path.split('/')
-let current_page = current_path[current_path.length -1 ]
+let current_page = current_path[current_path.length - 1]
 
 if (localStorage.getItem('is_login')) {
     links.remove()
@@ -31,41 +31,42 @@ let products = [
     {
         id: 1,
         image: 'cat-img-2.jpg',
-        name: 'product-1',
+        name: 'Shoes',
         price: 14,
     },
     {
         id: 2,
         image: 'cat-img-4.jpg',
-        name: 'product-2',
+        name: 'Headphone',
         price: 10,
     },
     {
         id: 3,
         image: 'product-3.jpg',
-        name: 'product-3',
+        name: 'T-shirt',
         price: 35,
     },
     {
         id: 4,
         image: 'product-5.jpg',
-        name: 'product-4',
+        name: 'Red Watch',
         price: 20,
     },
     {
         id: 5,
         image: 'product-9.jpg',
-        name: 'product-5',
+        name: 'Selvier Watch',
         price: 50,
     },
 ]
+localStorage.setItem('products', JSON.stringify(products))
+let search_input = document.querySelector('.search')
 
-function showProducts() {
-    products.forEach((element) => {
-        products_div.innerHTML += `
-        <div class="product-card">
+function showProducts(current_products = []) {
+    let prod = current_products.map((element) => {
+        return `<div class="product-card">
                 <div class="product-image">
-                    <img src="assets/${element.image}" alt="product-image"  >
+                    <img src="assets/${element.image}" alt="product-image">
                 </div>
                 <div class="product-details">
                     <div class="product-det">
@@ -83,16 +84,26 @@ function showProducts() {
                         </button>
                     </div>
                 </div>
-            </div>
-        `;
+            </div>`
+    })
+    products_div.innerHTML = prod
+}
+
+if (current_page == 'index.html') {
+    showProducts(JSON.parse(localStorage.getItem('products')))
+    search_input.addEventListener('keyup', (e) => {
+        showProducts(search(e.target.value, JSON.parse(localStorage.getItem('products'))))
+        if (e.target.value.trim() === '')
+            showProducts(JSON.parse(localStorage.getItem('products')))
     })
 }
-if (current_page == 'index.html') {
-    showProducts()
+
+function search(name, array) {
+    return array.filter((e) => e.name.toUpperCase().indexOf(name.toUpperCase()) != -1)
 }
 
 function redirectToProductDetails(id) {
     localStorage.setItem('selected_product', id)
-    window.location.href = 'products/product_details.html' 
+    window.location.href = 'products/product_details.html'
 }
 /*  End of Shopping Cart Implementation */
